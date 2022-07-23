@@ -5,11 +5,15 @@ $main-color: #111
     padding: 0 15px
     margin: 0 auto
 .link-btn
+    display: inline-block
+    font-family: 'Open Sans', sans-serif
+    color: #fff
     padding: 15px 30px
     background-color: #ffa54d
     text-transform: uppercase
     text-align: center
     font-size: 14px
+    font-weight: bold
     line-height: 14px
 .title
     font-family: 'Roboto', sans-serif
@@ -32,7 +36,7 @@ $main-color: #111
     top: 0
     width: 100%
     background-color: #1F203A
-    z-index: 1
+    z-index: 2
     &-wrapper
         min-height: 100px
         display: flex
@@ -104,6 +108,7 @@ $main-color: #111
         color: #fff
 
 /* promo */
+
 .promo
     &-wrapper
         position: relative
@@ -171,10 +176,184 @@ $main-color: #111
             width: 525px
             height: 590px
         &__link
-            font-family: 'Open Sans', sans-serif
             background-color: rgba(0,0,0,0)
             color: $main-color
             border: 2px solid $main-color
             align-self: flex-start
             &:hover
                 border: 2px solid rgba(0,0,0,0)
+
+/* about */ 
+
+.about
+    min-height: 650px
+    display: flex
+    align-items: center
+    &-wrapper
+        width: 70%
+        display: flex
+        margin: 0 auto
+    &-flex
+        flex-basis: 50%
+        &__inner
+            margin: 0 20px
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+        &__title
+            font-size: 130px
+            text-align: right
+        &__text
+            font-size: 16px
+        &__link
+            align-self: flex-start
+            margin: 20px 0
+
+/* subabout */
+
+.subabout
+    min-height: 700px
+    display: flex
+    align-items: center
+    &-wrapper
+        width: 70%
+        text-align: center
+        color: $main-color
+        margin: 0 auto
+        &__title
+            position: relative
+            font-family: 'Montserrat', sans-serif
+            font-size: 48px
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 5px
+                position: absolute
+                top: -100px
+                background-color: $main-color
+        &__arrow
+            position: relative
+            width: 64px
+            height: 64px
+            margin: 20px auto
+            &::before
+                content: ''
+                display: block
+                width: 100%
+                height: 3px
+                background-color: $main-color
+                position: absolute
+                left: 50%
+                top: 50%
+                transform: translate(-50%, -50%) rotate(90deg)
+        &__arrow-component
+            width: 25%
+            height: 25%
+            border-top: 3px solid $main-color
+            border-right: 3px solid $main-color
+            position: absolute
+            left: 50%
+            bottom: 0
+            transform: translateX(-50%) rotate(135deg)
+        &__text
+            font-family: 'Montserrat', sans-serif
+            font-size: 20px
+            font-weight: 600
+            letter-spacing: 5px
+            text-transform: uppercase
+
+/* portfolio */
+
+.portfolio
+    min-height: 1400px
+    display: grid
+    align-items: center
+    &-wrapper
+        text-align: center
+        &__link
+            margin-top: 50px
+    &-list
+        display: grid
+        grid-template: repeat(3, 400px) / repeat(3, 1fr)
+        &__item
+            position: relative
+        &__hint-wrapper
+            position: relative
+            z-index: 1
+            height: 100%
+            width: 100%
+            font-family: 'Roboto'
+            font-size: 30px
+            display: flex
+            align-items: center
+            justify-content: center
+            text-transform: uppercase
+            color: #fff
+            background-color: #ffa54d
+            opacity: 0
+            &:hover
+                opacity: 1
+                transition: 1.5s all
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: cover
+            position: absolute
+            left: 0
+            top: 0
+
+/* communication */
+
+.communication
+    min-height: 600px
+    display: flex
+    align-items: center
+    &-wrapper
+        display: flex
+        justify-content: space-between
+    &-flex
+        min-height: 400px
+        flex-basis: 45%
+        &:last-child
+            flex-basis: 35%
+            text-align: right
+        &__innner
+            height: 100%
+            display: flex
+            flex-direction: column
+        &__title
+            font-size: 36px
+            letter-spacing: normal
+            margin-bottom: 20px
+        &__text
+            font-size: 16px
+            line-height: 2
+            &--bottom
+                margin-top: auto
+        &__link
+            align-self: flex-start
+            margin-top: 20px
+
+/* footer */
+
+.footer
+    min-height: 400px
+    background: linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/footer-bg.jpg') center center/cover no-repeat
+    display: flex
+    align-items: center
+    &-wrapper
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        &__text
+            width: 80%
+            color: #fff
+            text-align: center
+        &__link, &__link:visited
+            display: inline-block
+            font-size: 32px
+            color: #fff
+            margin: 20px 15px
